@@ -83,7 +83,7 @@ public class Window extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
     }
-
+    //called when add button is clicked to add a new rule layout
     private void addRulesLayout() {
         JTextField rulesField1 = new JTextField();
         JTextField rulesField2 = new JTextField();
@@ -110,7 +110,8 @@ public class Window extends JFrame{
         rulesPanel.add(vBoxR);
 
     }
-
+    
+    //called when add button is clicked to add a new symbol layout
     private void addSymbLayout() {
         JTextField charField = new JTextField();
         charField.setPreferredSize(new Dimension(60, 20));
@@ -145,7 +146,7 @@ public class Window extends JFrame{
         }
         return symbList;
     }
-
+    //error showing function
     private void err(String s) {
         System.out.println(s);
         int input = JOptionPane.showOptionDialog(null, s, "err", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null,null);
