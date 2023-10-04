@@ -50,7 +50,7 @@ public class NonTerminal extends Symb{
         }
         return s;
     }
-
+    //checks if list of firsts of this symbol contains a symbol s
     public boolean firstContains(String s){
         for (int i = 0; i< firsts.size(); i++){
             if (firsts.get(i).getName().equals(s)){
@@ -59,7 +59,7 @@ public class NonTerminal extends Symb{
         }
         return false;
     }
-
+    //checks if list of follows of this symbol contains a symbol s
     public boolean followContains(String s){
         for (int i = 0; i< follows.size(); i++){
             if (follows.get(i).getName().equals(s)){
@@ -83,6 +83,7 @@ public class NonTerminal extends Symb{
         }
         return false;
     }
+    //add all symballs in firsts list except for epselon
     public boolean firstAddAllNoEps(List<Terminal> symbs){
         int a = 0;
         for (int i = 0; i<symbs.size(); i++){
@@ -100,7 +101,7 @@ public class NonTerminal extends Symb{
         }
         return false;
     }
-
+    //add all symballs in follows list except for epselon
     public boolean followAddAllNoEps(List<Terminal> symbs){
         int a = 0;
         for (int i = 0; i<symbs.size(); i++){
